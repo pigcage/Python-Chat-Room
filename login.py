@@ -10,7 +10,7 @@ connectionlist = {}
 #For correct userName-password return true, otherwise return false.
 def sql_checkLogin(userName,password):
     #return True #Login test, delete this line later
-    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='75968410cb',db='test',charset='utf8')
+    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='',db='test',charset='utf8')
     sql="select * from CR_userAccess where userName = '" + userName + "' AND password = '" + password + "';"
     cur = sqlConn.cursor()
     cur.execute(sql)
