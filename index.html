@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Python聊天室系统</title>
+<link rel="stylesheet" href="index.css" type="text/css">
+<script src="jquery.min.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="login">
+			<p>欢迎来到聊天室，</p>
+			<a href="#" onclick="loginWindow()" id="loginLink">请登录</a>
+			<p style="display:none" id="loginUserName"></p>
+			<a href="#" id="quitLink" style="display:none">退出</a>
+		</div>
+		<div class="onlineUsersDiv">
+			<p>在线人数：</p>
+			<p id="onlineUsers">0</p>
+		</div>
+	</div>
+	<div class="chatWindowOuter">
+		<div id="chatWindow">
+			<div style="margin:2%;">
+				<p id="welcomeText">欢迎来到聊天室，登录参与讨论</p>
+				<div class="message" style="display:none">
+					<p id="userName">一只猪笼</p>
+					<p>(</p>
+					<p id="time">2016/6/17 15:22</p>
+					<p>) :</p>
+					<p style="display:block;font-weight:normal;">Hello !</p>
+				</div>
+			</div>
+		</div>
+		<div id="onlineList">
+			<div id="onlineListInner">
+			</div>
+		</div>
+		<div id="onlineListBtn" align="center">
+			<p class="onlineBtnText">在线用户</p>
+		</div>
+		
+	</div>
+	<div class="inputWindow">
+		<textarea id="text"></textarea>
+		<div class="buttonsOuter">
+			<div class="buttons" id="clear">清除</div>
+			<div class="buttons" id="send">发送</div>
+		</div>
+	</div>
+	<div class="footer" align="right">
+		<p style="display:inline;">作者：一只猪笼</p>
+		<p style="display:inline;margin:0 2%;">Blog : www.pigcage.cn</p>
+	</div>
+	<div id="loginWindowOuter" style="display:none;">
+		<div class="loginWindow">
+			<div class="windowHeader">
+				<p style="display:inline-block;color:#fff;font-weight:bold;">用户登录</p>
+				<img id="closeBtn" src="img/close.png" onclick="closeLoginWindow()"/>
+			</div>
+			<div class="input">
+				<div class="loginText" style="margin-left:22%;">
+					<p>用户名：</p>
+				</div>
+				<input type="text" id="userName"/>
+				<br/>
+				<div class="loginText" style="margin-left:22%;">
+					<p>密码：</p>
+				</div>
+				<input type="password" id="password"/>
+			</div>
+			<div id="loginBtn">登&nbsp;&nbsp;录</div>
+			<p id="errMsg"></p>
+		<div>
+	</div>
+</body>
+</html>

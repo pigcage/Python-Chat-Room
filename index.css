@@ -1,0 +1,218 @@
+html{
+    font-size:62.5%;
+}
+body{
+	font-family:"微软雅黑";
+	margin:0;
+    font-size:12px;
+    font-size:1.2rem;
+	background-color:rgb(238,238,238);
+	min-width:500px;
+	min-height:580px;
+}
+p{
+    font-size:14px;
+    font-size:1.4rem;
+	margin:0;
+}
+
+.header{
+	position:relative;
+	color:#fff;
+	background-color:#00a2ca;
+}
+.header img{
+    float: right;
+    margin-right: 2%;
+    margin-top: .85rem;
+    height: .8rem;
+}
+.header p{
+	display:inline-block;
+    margin:.4rem 0;
+}
+.header a{
+	color:#fff;
+	font-size:1.2rem;
+	/* text-decoration:none;  */
+	margin:.4rem 0;
+    display: inline-block;
+}
+.header a:hover{color:#ff9f40;}
+.login{
+	position:relative;
+	display:inline-block;
+	margin-left:2%;
+}
+.onlineUsersDiv{
+	float:right;
+	margin-right:2%;
+	display:inline-block;
+}
+.chatWindowOuter{
+	position:relative;
+	height: 60%;
+    margin: 1% 0;
+}
+#onlineListBtn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 2%;
+    height: 96%;
+    background-color: #f7b600;
+}
+#onlineListBtn:hover{background-color:#ffc72b;}
+.onlineBtnText{
+	position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 6.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+#chatWindow{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 94%;
+    height: 96%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+#chatWindow p{color:#333;}
+#onlineList{
+	position:absolute;
+	right:4%;
+	top:2%;
+	width:0%;
+	height:96%;
+	overflow:auto;
+	background-color:#d6a315;
+}
+#onlineListInner{
+	position:relative;
+	margin:1%;
+}
+#onlineListInner p{
+	margin:2%;
+	padding:2%;
+	color:#fff;
+	border:1px dotted #fff;
+	border-style:none none dotted none;
+}
+.message{
+	border-radius:.5rem;
+	padding:0 .5rem;
+	margin:1rem 2%;
+}
+.message:hover{
+	background-color:rgba(73,255,255,.3);
+	border:1px solid rgb(73,204,255);
+}
+.message p{
+	font-weight:bold;
+	display:inline;
+}
+.inputWindow{
+	margin:1% 2%;
+	position:relative;
+	height:17%;
+}
+#text{
+    height: 61%;
+    width: 100%;
+    display: inline-block;
+	/* min-width:500px; */
+}
+.buttons{
+	position: relative;
+    display: inline;
+    padding: .3rem 2rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #00a2ca;
+	border-radius:.4rem;
+}
+.buttons:hover{background-color: #39c4e4;}
+.buttonsOuter{
+	position: relative;
+    margin-top: 1%;
+}
+.footer{
+    z-index: -1;
+    position: relative;
+    /* bottom: 2%; */
+    /* right: 2%; */
+    margin: 3% 0%;
+	/* min-width:500px; */
+    color: #999;
+}
+#loginWindowOuter{
+	z-index:999;
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background-color:rgba(0,0,0,.75);
+}
+.loginWindow{
+	/*绝对居中*/
+	margin:auto;
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;
+	background-color:#fff;
+	height:30%;
+	width:30%;
+	min-width:400px;
+	min-height:300px;
+}
+.windowHeader{
+	position:relative;
+	padding:.5rem 1rem;
+	color:#fff;
+	background-color:#00a4ca;
+}
+.loginText{
+	color:#333;
+	display: inline-block;
+    width: 16%;
+	
+}
+.input{
+	position:relative;
+	margin:0 auto;
+	margin-top:10%;
+}
+.input div{margin:1rem 0;}
+#closeBtn{
+	position:absolute;
+	right:0;
+	height:90%;
+	top:5%;
+}
+.input input{width:40%;}
+#loginBtn{
+	position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-left: 39%;
+    padding: 1%;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #f7b600;
+}
+#loginBtn:hover{background-color:#ffc72b;}
+#errMsg{
+	display: none;
+	margin-left:3%;
+	color:red;
+	
+}
