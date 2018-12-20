@@ -33,7 +33,7 @@ $(document).ready(function(){
 	var socket;
 	function init(){
 		try{
-			var host ="ws://127.0.0.1:1237/";//ws://120.24.36.216:1234/
+			var host ="ws://184.170.213.206:1237/";
 			socket = new WebSocket(host);
 			socket.onopen = function(){
 				socket.send(localStorage.getItem("name"));
@@ -60,7 +60,8 @@ $(document).ready(function(){
 				}
 				//更新在线列表和人数
 				else if (message[0] == "onlineList"){
-					alert(message);
+					//TODO
+					//alert(message);
 				}
 				//用户退出：消息框提示，更新在线人数和列表
 				else
@@ -153,7 +154,7 @@ $(document).ready(function(){
 			return;
 		}
 		//验证用户名密码
-		var loginHost = "ws://127.0.0.1:1236";
+		var loginHost = "ws://184.170.213.206:1236";
 		var loginSocket = new WebSocket(loginHost);
 		loginSocket.onopen = function(msg){
 			loginSocket.send(userName + "," + password);

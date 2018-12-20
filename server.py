@@ -10,32 +10,32 @@ connectionlist = {}
 
 #return online members and amount as a tuple: (user1,user2,...)
 def sql_onlineList():
-    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='',db='test',charset='utf8')
+    sqlConn = MySQLdb.connect(host='184.170.213.206',user='root',passwd='',db='pythonchatroom',charset='utf8')
     sql="select * from CR_onlineList;"
     cur = sqlConn.cursor()
     cur.execute(sql)
     result = cur.fetchall()
     cur.close()
-    conn.close()
+    sqlConn.close()
     return result
 
 #add new member to online list
 def sql_addToList(name):
-    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='',db='test',charset='utf8')
+    sqlConn = MySQLdb.connect(host='184.170.213.206',user='root',passwd='',db='pythonchatroom',charset='utf8')
     sql="insert into CR_onlineList values ('" + name + "');"
     cur = sqlConn.cursor()
     cur.execute(sql)
     cur.close()
-    conn.close()
+    sqlConn.close()
 
 #remove offline members
 def sql_removeFromList(name):
-    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='',db='test',charset='utf8')
+    sqlConn = MySQLdb.connect(host='184.170.213.206',user='root',passwd='',db='pythonchatroom',charset='utf8')
     sql="delete from CR_onlineList where name = '" + name + "';"
     cur = sqlConn.cursor()
     cur.execute(sql)
     cur.close()
-    conn.close()
+    sqlConn.close()
 
 
 def sendMessage(data):
@@ -153,7 +153,7 @@ class WebSocketServer(object):
     def begin(self):
         print 'WebSocketServer Start!'
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(("127.0.0.1",1237))
+        self.socket.bind(("184.170.213.206",1237))
         self.socket.listen(50)
          
         global connectionlist

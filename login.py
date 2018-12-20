@@ -3,14 +3,14 @@ import struct
 import hashlib
 import base64
 import threading,random
-#import MySQLdb
+import MySQLdb
 
 connectionlist = {}
 
 #For correct userName-password return true, otherwise return false.
 def sql_checkLogin(userName,password):
     #return True #Login test, delete this line later
-    sqlConn = MySQLdb.connect(host='120.24.36.216',user='root',passwd='',db='test',charset='utf8')
+    sqlConn = MySQLdb.connect(host='184.170.213.206',user='root',passwd='',db='pythonchatroom',charset='utf8')
     sql="select * from CR_userAccess where userName = '" + userName + "' AND password = '" + password + "';"
     cur = sqlConn.cursor()
     cur.execute(sql)
@@ -122,7 +122,7 @@ class WebSocketServer(object):
     def begin(self):
         print 'LoginServer Start!'
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(("127.0.0.1",1236))
+        self.socket.bind(("184.170.213.206",1236))
         self.socket.listen(50)    
         global connectionlist
         i=0
